@@ -1,0 +1,28 @@
+{
+    "menuItems": [
+      {
+        "name": "Home",
+        "link": "/"
+      },
+      {
+        "name": "About",
+        "link": "/about"
+      },
+      {
+        "name": "My Projects",
+        "link": "/my-projects"
+      },
+      {
+        "name": "Work Experience",
+        "link": "/experience"
+      }
+    ],
+    "profile": {
+      "name": "Atika Gondal",
+      "title": "Software Developer",
+      "bio": "A passionate software developer with expertise in AI and web development.",
+      "education": "Bachelor’s Degree in Computer Engineering from OsloMet",
+      "skills": ["Python", "Django", "React", "JavaScript", "SQL"]
+    }
+  }
+  

@@ -1,0 +1,71 @@
+/* Generell stil for alle sider */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4; /* Lys nøytral bakgrunn */
+  color: #333; /* Mørk grå tekst for god lesbarhet */
+  margin: 0;
+  padding: 0;
+}
+
+/* Beholder en konsistent stil for innholdsbokser */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white; /* Hvit for nøytral layout */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil for overskrifter */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2c3e50; /* Mørk blågrå */
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #444; /* Litt lysere grå */
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Knappestil */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #3498db; /* Blå farge */
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2980b9; /* Mørkere blå */
+}
+
+/* Navigasjonsmeny */
+.navbar {
+  background: #2c3e50; /* Mørk blågrå */
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}

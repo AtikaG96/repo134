@@ -1,0 +1,75 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Bruk hele skjermhøyden */
+    text-align: center;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; /* Inkluder padding i høyden */
+}
+
+.text-container {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem; /* Redusert størrelse for å passe bedre */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem; /* Redusert størrelse for å passe bedre */
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1rem; /* Redusert størrelse for å passe bedre */
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* Mindre padding for knapper */
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem; /* Mindre fontstørrelse for knapper */
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+}
+
+.btn:hover {
+    background: #ffdd44;
+    transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* Fade-in animasjon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

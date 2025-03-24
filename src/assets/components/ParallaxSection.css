@@ -1,0 +1,14 @@
+.parallax {
+    background-image: url('https://your-image-url.com');
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
