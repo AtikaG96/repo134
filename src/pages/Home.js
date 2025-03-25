@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/components/home.css';
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
         <h2>En lidenskapelig dataingeniør med ekspertise i AI, webutvikling og systemutvikling.</h2>
         <p>Jeg spesialiserer meg på å skape innovative løsninger som kombinerer teknologi og kreativitet for å løse komplekse problemer.</p>
         <div className="button-container">
-          <a href="/about" className="btn">Lær mer om meg</a>
+          <Link to="/about" className="btn">Bli mer kjent med meg</Link>
         </div>
       </div>
     </div>
