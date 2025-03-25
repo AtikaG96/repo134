@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://atikag96.github.io/repo134",
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
@@ -44,7 +43,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0"
-
+    "gh-pages": "^6.3.0"
   }
 }
