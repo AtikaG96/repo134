@@ -1,175 +1,189 @@
+/* Base Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Bruk en moderne font */
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .hero-section {
-    background: linear-gradient(135deg, #4b6cb7, #182848);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.category-buttons button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.category-buttons button.active {
+  background: linear-gradient(135deg, #ffcc00, #ffdd44);
+  color: black;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal Scroll Container */
+.projects-horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Project Container */
+.project-container {
+  display: inline-flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 300px;
+  flex: 0 0 auto;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #4b6cb7;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #4b6cb7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+  background-color: #182848;
+}
+
+/* GitHub Buttons */
+.github-profile {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.github-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #ffdd44;
+}
+
+/* Scrollbar Styling */
+.projects-horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-horizontal-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.projects-horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #4b6cb7;
+  border-radius: 4px;
+}
+
+.projects-horizontal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #182848;
+}
+
+/* Loading and Error States */
+.loading, .error {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
   
   .hero-section p {
-    font-size: 1.5rem;
-  }
-  
-  .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    font-size: 1.2rem;
   }
   
   .project-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
   }
   
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #4b6cb7;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #4b6cb7;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-card a:hover {
-    background-color: #182848;
-  }
-  
-  /* Pagineringsknapper */
-  .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .pagination button {
-    padding: 8px 16px;
-    background-color: #4b6cb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .pagination button.active {
-    background-color: #ffcc00;
-    color: black;
-  }
-  
-  .pagination button:hover {
-    background-color: #182848;
-  }
-  
-  /* GitHub-profilknapper */
   .github-profile {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .github-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ffcc00;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .github-button:hover {
-    background-color: #ffdd44;
-  }
-  
-  /* Animasjoner */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .project-card {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  /* Kategori-knapper */
-.category-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-    flex-wrap: wrap; /* Tillat knapper å brytes til nye linjer på små skjermer */
-  }
-  
-  .category-buttons button {
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #4b6cb7, #182848); /* Gradient-bakgrunn */
-    color: white;
-    border: none;
-    border-radius: 25px; /* Runde hjørner */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtile skygger */
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  /* Aktiv kategori */
-  .category-buttons button.active {
-    background: linear-gradient(135deg, #ffcc00, #ffdd44); /* Gul gradient for aktiv knapp */
-    color: black;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Større skygge for aktiv knapp */
-  }
-  
-  /* Hover-effekt */
-  .category-buttons button:hover {
-    transform: translateY(-3px); /* Flytt knappen litt opp */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Større skygge ved hover */
-  }
-  
-  /* Animasjoner */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .category-buttons button {
-    animation: fadeIn 0.5s ease-in-out; /* Fade-in animasjon */
-  }
+}

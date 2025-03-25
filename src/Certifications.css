@@ -1,0 +1,199 @@
+/* Certifications.css */
+.certifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .certifications-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .certifications-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .certifications-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+  }
+  
+  .certifications-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .tab-button {
+    padding: 0.8rem 1.5rem;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #495057;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background: #e9ecef;
+  }
+  
+  .tab-button.active {
+    background: #0078d4;
+    color: white;
+  }
+  
+  .tab-icon {
+    font-size: 1.2rem;
+  }
+  
+  .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .category-button {
+    padding: 0.6rem 1.2rem;
+    background: #e9ecef;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .category-button:hover {
+    background: #dee2e6;
+  }
+  
+  .category-button.active {
+    background: #2c3e50;
+    color: white;
+  }
+  
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .certification-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .certification-badge {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    flex: 1;
+  }
+  
+  .card-title h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    line-height: 1.4;
+  }
+  
+  .verification-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #0078d4;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+  }
+  
+  .verification-link:hover {
+    color: #005a9e;
+    text-decoration: underline;
+  }
+  
+  .card-description {
+    color: #495057;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  
+  .meta-icon {
+    color: #adb5bd;
+  }
+  
+  .card-keywords {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .keywords-icon {
+    color: #adb5bd;
+    margin-top: 0.2rem;
+  }
+  
+  .keywords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .keyword-tag {
+    background: #e9ecef;
+    color: #495057;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }

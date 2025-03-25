@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Hvis du bruker React Router
-import './Navbar.css'; // Importer CSS-filen for styling
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('home'); // Standard aktiv lenke
+  const [activeLink, setActiveLink] = useState('home');
 
   return (
     <nav className="navbar">
@@ -15,11 +15,13 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setActiveLink('about')}>Om meg</Link>
         </li>
         <li className={activeLink === 'projects' ? 'active' : ''}>
-        <Link to="/myprojects" onClick={() => setActiveLink('myprojects')}>Prosjekter</Link>
-        
-                </li>
-        <li className={activeLink === 'contact' ? 'active' : ''}>
+          <Link to="/myprojects" onClick={() => setActiveLink('projects')}>Prosjekter</Link>
+        </li>
+        <li className={activeLink === 'experience' ? 'active' : ''}>
           <Link to="/experience" onClick={() => setActiveLink('experience')}>Arbeidserfaring</Link>
+        </li>
+        <li className={activeLink === 'certifications' ? 'active' : ''}>
+          <Link to="/certifications" onClick={() => setActiveLink('certifications')}>Sertifiseringer</Link>
         </li>
       </ul>
     </nav>

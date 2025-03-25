@@ -1,0 +1,82 @@
+{
+    "microsoft": {
+      "modules": [
+        {
+          "name": "Explore the fundamentals of Microsoft Dynamics 365 Customer Service",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-customer-service/"
+        },
+        {
+          "name": "Explore the fundamentals of Microsoft Dynamics 365 Sales",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-sales/"
+        },
+        {
+          "name": "Explore the fundamentals of Microsoft Dynamics 365 Field Service",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-field-service/"
+        },
+        {
+          "name": "Explore the fundamentals of Microsoft Dynamics 365 Customer Insights",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-customer-insights/"
+        },
+        {
+          "name": "Explore the core capabilities of Microsoft Dynamics 365 customer engagement apps",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-core-capabilities-dynamics-365-customer-engagement-apps/"
+        },
+        {
+          "name": "MS-900 Microsoft 365 Fundamentals: Describe Microsoft 365 apps and services",
+          "link": "https://learn.microsoft.com/en-us/training/modules/ms-900-describe-microsoft-365-apps-services/"
+        },
+        {
+          "name": "Microsoft Azure Fundamentals: Describe cloud concepts",
+          "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-concepts/"
+        },
+        {
+          "name": "Kom i gang med Power BI",
+          "link": "https://learn.microsoft.com/nb-no/training/modules/get-started-with-power-bi/"
+        },
+        {
+          "name": "Design a Power Apps canvas app by using Figma",
+          "link": "https://learn.microsoft.com/en-us/training/modules/design-power-apps-canvas-app-using-figma/"
+        },
+        {
+          "name": "Microsoft Security, Compliance, and Identity Fundamentals: Describe the concepts of security, compliance, and identity",
+          "link": "https://learn.microsoft.com/en-us/training/modules/describe-concepts-security-compliance-identity/"
+        }
+      ],
+      "trophies": [
+        {
+          "name": "Trophy: Explore the fundamentals of Microsoft Dynamics 365 Customer Service",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-customer-service/"
+        },
+        {
+          "name": "Trophy: MS-900 Microsoft 365 Fundamentals: Describe Microsoft 365 apps and services",
+          "link": "https://learn.microsoft.com/en-us/training/modules/ms-900-describe-microsoft-365-apps-services/"
+        },
+        {
+          "name": "Trophy: Microsoft Security, Compliance, and Identity Fundamentals: Describe the concepts of security, compliance, and identity",
+          "link": "https://learn.microsoft.com/en-us/training/modules/describe-concepts-security-compliance-identity/"
+        },
+        {
+          "name": "Trophy: Explore the fundamentals of Microsoft Dynamics 365 Field Service",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-field-service/"
+        },
+        {
+          "name": "Trophy: Explore the fundamentals of Microsoft Dynamics 365 Customer Service",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-customer-service/"
+        },
+        {
+          "name": "Trophy: Explore the fundamentals of Microsoft Dynamics 365 Sales",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-sales/"
+        },
+        {
+          "name": "Trophy: Explore the fundamentals of Microsoft Dynamics 365 Customer Insights",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-dynamics-365-customer-insights/"
+        },
+        {
+          "name": "Trophy: Explore the core capabilities of Microsoft Dynamics 365 customer engagement apps",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-core-capabilities-dynamics-365-customer-engagement-apps/"
+        }
+      ]
+    },
+    "simplilearn": []
+  }
+  
