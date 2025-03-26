@@ -1,22 +1,61 @@
 import React from 'react';
+import { FaCode, FaDatabase, FaRobot, FaUserGraduate, FaHeadset, FaBrain } from 'react-icons/fa';
 import '../about.css';
 
 const About = () => {
+  const qualifications = [
+    {
+      icon: <FaCode />,
+      title: "Dataingeniør",
+      description: "Behersker programmeringsspråkene Java, JavaScript, HTML5, CSS, SQL, Python, AI/ML, Azure, AWS, Django, React, Node.js, TypeScript"
+    },
+    {
+      icon: <FaRobot />,
+      title: "Fullstack-utvikling",
+      description: "Erfaring med både frontend og backend utvikling, inkludert AI-løsninger"
+    },
+    {
+      icon: <FaUserGraduate />,
+      title: "Lærerassistent",
+      description: "Veiledning og støtte for studenter ved OsloMet"
+    },
+    {
+      icon: <FaHeadset />,
+      title: "IT-support",
+      description: "Brukerstøtte for læringsplattformer og videokonferanse"
+    },
+    {
+      icon: <FaDatabase />,
+      title: "Databaser",
+      description: "Integrering av backend-løsninger med frontend-grensesnitt"
+    },
+    {
+      icon: <FaBrain />,
+      title: "Personlige egenskaper",
+      description: "Analytisk, strukturert og detaljorientert problemløser"
+    }
+  ];
+
   return (
-    <section id="about" className="about-section">
-      <h2 className="section-title">About Me</h2>
-      <div className="about-container">
-        <h3 className="about-subtitle">Nøkkelkvalifikasjoner</h3>
-        <ul className="about-list">
-          <li><strong>Dataingeniør:</strong> Behersker programmeringsspråkene Java, Javascript, HTML5, CSS, SQL, Python, AI og ML, Azure Directory, AWS, Django, React, Node.JS, TypeScript og H2-Databasen.</li>
-          <li><strong>Utvikling og programmering:</strong> Erfaring med Python, AI og fullstack-utvikling. Utviklet løsninger både frontend og backend.</li>
-          <li><strong>Lærerassistent:</strong> Erfaring fra OsloMet med samarbeid i gruppearbeid og støtte i lærerassistent-roller.</li>
-          <li><strong>IT-support:</strong> Støtte til brukere som hadde tekniske problemer med systemer som Canvas og Zoom.</li>
-          <li><strong>Databaser:</strong> Grunnleggende forståelse av databaser og hvordan man integrerer backend-løsninger med frontend-grensesnitt.</li>
-          <li><strong>Personlig:</strong> Er analytisk, strukturert og detaljorientert, god til å håndtere komplekse problemer.</li>
-        </ul>
+    <div className="about-container">
+      <div className="about-card">
+        <header className="about-header">
+          <h2>Nøkkelkvalifikasjoner</h2>
+        </header>
+        
+        <div className="qualifications-grid">
+          {qualifications.map((item, index) => (
+            <div className="qualification-item" key={index}>
+              <div className="qualification-icon">{item.icon}</div>
+              <div className="qualification-content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

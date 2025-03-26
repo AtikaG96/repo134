@@ -1,122 +1,147 @@
-/* About Section Styles */
+/* About.css */
 :root {
-  --primary-color: #4b6cb7;
-  --secondary-color: #182848;
-  --accent-color: #ffcc00;
-  --text-color: #333;
+  --primary: #4b6cb7;
+  --secondary: #182848;
+  --accent: #06b6d4;
+  --text: #333;
   --light-text: #f9f9f9;
+  --beige: #f5f5f0;
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.about-section {
-  padding: 80px 20px;
-  background-color: #f8fafc;
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-color);
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  font-family: 'Inter', sans-serif;
 }
 
-.about-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.about-card {
+  background: var(--beige);
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.section-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--secondary-color);
+.about-header {
   text-align: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-  position: relative;
-  padding-bottom: 15px;
+  margin-bottom: 3rem;
 }
 
-.section-title::after {
+.about-header h1 {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.about-header h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.about-header h2::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  border-radius: 2px;
-}
-
-.about-container {
-  background-color: #ffffff;
-  box-shadow: var(--card-shadow);
-  border-radius: 12px;
-  padding: 40px;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-subtitle {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: var(--primary-color);
-  font-weight: 600;
-  margin-bottom: 30px;
-  text-align: center;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .qualifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
-.qualification-card {
-  background: #fff;
+.qualification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.qualification-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.qualification-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .qualification-icon {
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  font-size: 2rem;
+  background: rgba(75, 108, 183, 0.1);
+  color: var(--primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
 }
 
-.qualification-title {
-  font-size: 1.25rem;
-  color: var(--secondary-color);
-  margin-bottom: 10px;
-  font-weight: 600;
+.qualification-content h3 {
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-bottom: 0.8rem;
 }
 
-.qualification-description {
+.qualification-content p {
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 1rem;
+  margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  .about-section {
-    padding: 60px 15px;
-  }
-  
-  .about-container {
-    padding: 25px;
+  .about-card {
+    padding: 2rem;
   }
   
   .qualifications-grid {
     grid-template-columns: 1fr;
   }
+  
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-header h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .qualification-card {
-    padding: 20px;
+  .about-container {
+    padding: 1rem;
+  }
+  
+  .about-card {
+    padding: 1.5rem;
+  }
+  
+  .qualification-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .qualification-icon {
+    margin-bottom: 1rem;
   }
 }
