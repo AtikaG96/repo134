@@ -1,221 +1,158 @@
-/* App.css - Global styling */
+/* home.css */
 :root {
-    /* Fargepalett */
-    --primary: #3b82f6;       /* Dynamisk blå */
-    --primary-rgb: 59, 130, 246;
-    --secondary: #7c3aed;     /* Rik lilla */
-    --secondary-rgb: 124, 58, 237;
-    --accent: #06b6d4;        /* Cyan */
-    --dark: #1e293b;          /* Mørk tekst */
-    --light: #f8fafc;         /* Lys bakgrunn */
-    
-    /* Bakgrunnsfarger */
-    --bg-gradient-start: #f0f4f8;
-    --bg-gradient-mid: #e0e7ff;
-    --bg-gradient-end: #dbeafe;
-    
-    /* Glassmorfisme */
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Globale stiler */
-  body {
-    /* Animasjon for hele sidens bakgrunn */
-    background: linear-gradient(
-      135deg,
-      var(--bg-gradient-start),
-      var(--bg-gradient-mid),
-      var(--bg-gradient-end)
-    );
-    background-size: 300% 300%;
-    animation: gradientFlow 15s ease infinite;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
-  }
-  
-  @keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  /* Home-komponent spesifikke stiler */
-  .home-container {
-    /* Glasspanel-design */
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 24px;
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    
-    /* Layout */
-    max-width: 1200px;
-    min-height: 80vh;
-    margin: 2rem auto;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-  }
-  
-  /* Dekorative elementer */
-  .home-container::before,
-  .home-container::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.15;
-    z-index: -1;
-  }
-  
-  .home-container::before {
-    /* Blå form */
-    top: -20%;
-    right: -20%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(
-      circle,
-      rgba(var(--primary-rgb), 0.4) 0%,
-      transparent 70%
-    );
-  }
-  
-  .home-container::after {
-    /* Lilla form */
-    bottom: -20%;
-    left: -20%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(
-      circle,
-      rgba(var(--secondary-rgb), 0.3) 0%,
-      transparent 70%
-    );
-  }
-  
-  /* Tekststiler */
-  .home-container h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(
-      90deg,
-      var(--primary),
-      var(--secondary)
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    line-height: 1.2;
-  }
-  
-  .home-container h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--dark);
-    margin-bottom: 2rem;
-    max-width: 700px;
-  }
-  
-  /* Forbedret knappestil - Nå som en ekte knapp */
-  .cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(
-      135deg,
-      var(--primary),
-      var(--secondary)
-    );
-    color: white;
-    border-radius: 50px;
-    border: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 2rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    
-    /* Knappens tilstander */
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-      background: linear-gradient(
-        135deg,
-        var(--secondary),
-        var(--primary)
-      );
-    }
-    
-    &:active {
-      transform: translateY(1px);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
-    }
-  }
-  
-  /* Responsivt design */
-  @media (max-width: 1024px) {
-    .home-container {
-      padding: 3rem;
-      margin: 1.5rem;
-      background-color: beige;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .home-container {
-      padding: 2rem 1.5rem;
-      min-height: 70vh;
-      background-color: beige;
+  --primary: #4b6cb7;
+  --secondary: #182848;
+  --accent: #06b6d4;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-    }
-    
-    .home-container h1 {
-      font-size: 2.5rem;
-    }
-    
-    .home-container h2 {
-      font-size: 1.4rem;
-    }
-    
-    .cta-button {
-      padding: 0.8rem 1.8rem;
-      font-size: 1rem;
-    }
-    
-    .home-container::before,
-    .home-container::after {
-      filter: blur(40px);
-    }
+body {
+  background: linear-gradient(135deg, #f0f4f8, #e0e7ff, #dbeafe);
+  background-size: 300% 300%;
+  animation: gradientFlow 15s ease infinite;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 1rem 2rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.nav-list a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Content wrapper */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+/* Text card */
+.text-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.text-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.text-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
   
-  @media (max-width: 480px) {
-    .home-container h1 {
-      font-size: 2rem;
-    }
-    
-    .cta-button {
-      width: 100%;
-      padding: 0.8rem;
-    }
+  .text-card {
+    padding: 2rem 1.5rem;
+  margin: 0 1rem;
+  border-radius: 10px;
   }
+  
+  .text-card h1 {
+    font-size: 2rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-card h1 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
