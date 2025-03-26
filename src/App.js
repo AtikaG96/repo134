@@ -9,6 +9,8 @@ import Experience from './pages/Experience';
 import Education from './pages/Education';
 import Contact from './pages/Contact';
 import Certifications from './pages/Certifications';
+import './GlobalStyles.css';
+
 
 const App = () => {
   return (
