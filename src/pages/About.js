@@ -1,56 +1,30 @@
-import React from "react";
-import {
-  FaCode,
-  FaDatabase,
-  FaRobot,
-  FaUserGraduate,
-  FaHeadset,
-  FaBrain,
-} from "react-icons/fa";
-import "../about.css";
+import React from 'react';
+import { FaCode, FaDatabase, FaRobot, FaUserGraduate, FaHeadset, FaBrain } from 'react-icons/fa';
+import '../about.css';
 
 const About = () => {
   const qualifications = [
-    {
-      icon: <FaCode />,
-      title: "Dataingeniør",
-      description:
-        "Behersker programmeringsspråkene Java, JavaScript, HTML5, CSS, SQL, Python, AI/ML, Azure, AWS, Django, React, Node.js, TypeScript",
-    },
-    {
-      icon: <FaRobot />,
-      title: "Fullstack-utvikling",
-      description:
-        "Erfaring med både frontend og backend utvikling, inkludert AI-løsninger",
-    },
-    {
-      icon: <FaUserGraduate />,
-      title: "Lærerassistent",
-      description: "Veiledning og støtte for studenter ved OsloMet",
-    },
-    {
-      icon: <FaHeadset />,
-      title: "IT-support",
-      description: "Brukerstøtte for læringsplattformer og videokonferanse",
-    },
-    {
-      icon: <FaDatabase />,
-      title: "Databaser",
-      description: "Integrering av backend-løsninger med frontend-grensesnitt",
-    },
-    {
-      icon: <FaBrain />,
-      title: "Personlige egenskaper",
-      description: "Analytisk, strukturert og detaljorientert problemløser",
-    },
+    { icon: <FaCode />, title: "Dataingeniør", description: "Java, JavaScript, Python, AI, Django, React, TypeScript" },
+    { icon: <FaRobot />, title: "Fullstack-utvikling", description: "Erfaring med frontend og backend" },
+    { icon: <FaUserGraduate />, title: "Lærerassistent", description: "Veiledning av studenter ved OsloMet" },
+    { icon: <FaHeadset />, title: "IT-support", description: "Brukerstøtte for læringsplattformer" },
+    { icon: <FaDatabase />, title: "Databaser", description: "PostgreSQL, MySQL, integrering med backend" },
+    { icon: <FaBrain />, title: "Personlige egenskaper", description: "Analytisk, strukturert, detaljorientert" }
   ];
 
   return (
     <div className="about-container">
       <div className="about-card">
-        <header className="about-header">
-          <h2>Nøkkelkvalifikasjoner</h2>
-        </header>
+        <div className="profile-section">
+          <div className="profile-text">
+            <h1>Atika Gondal</h1>
+            <p>Dataingeniør med lidenskap for utvikling, kunstig intelligens og problemløsning.</p>
+          </div>
+          <img src={process.env.PUBLIC_URL + '/profilbildet.jpeg'} alt="Profilbilde" className="profile-pic" />
+          
+        </div>
+        
+        <h2 className="section-title">Nøkkelkvalifikasjoner</h2>
 
         <div className="qualifications-grid">
           {qualifications.map((item, index) => (

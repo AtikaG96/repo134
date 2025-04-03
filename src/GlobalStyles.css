@@ -22,7 +22,7 @@
   
   body {
     background-color: var(--bg-light);
-    color: var(--text-dark);
+    color: #1e40af;
     line-height: 1.6;
     padding-top: 80px;
   }
