@@ -134,14 +134,36 @@
   .about-card {
     padding: 1.5rem;
   }
+  .qualifications-grid {
+    display: flex;
+    flex-wrap: wrap; /* Sørger for at det er responsivt */
+    gap: 20px; /* Avstand mellom elementene */
+    justify-content: center; /* Sentrerer elementene horisontalt */
+  }
   
   .qualification-item {
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    text-align: center;
+    gap: 15px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Gjør at to elementer ligger ved siden av hverandre */
   }
   
   .qualification-icon {
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #007bff;
   }
-}
+  
+  .qualification-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .qualification-content p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+  }
+}  
