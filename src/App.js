@@ -8,6 +8,7 @@ import MyProjects from './pages/MyProjects';
 import Experience from './pages/Experience';
 import Education from './pages/Education';
 import Contact from './pages/Contact';
+import Footer from './assets/components/Footer.css'; // Importer Footer-komponenten
 import Certifications from './pages/Certifications';
 import './GlobalStyles.css';
 
@@ -24,7 +25,10 @@ const App = () => {
           <Route path="/experience" element={<Experience />} />
           <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/certifications" element={<Certifications/>} />
+
+          <Route path="/footer" element={<Footer />} />
+
         </Routes>
       </HashRouter>
     </ProfileProvider>

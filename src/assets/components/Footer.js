@@ -1,13 +1,15 @@
 import React from 'react';
-import './Footer.css';
+import { FaGithub } from 'react-icons/fa';
+import './footer.css';  // Hvis du har en egen CSS-fil for footer
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="social-links">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <div className="footer-content">
+        <p>&copy; 2025 Atika Gondal</p>
+        <a href="https://github.com/brukernavn" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={30} />
+        </a>
       </div>
     </footer>
   );
