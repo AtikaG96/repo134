@@ -1,16 +1,14 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-import './footer.css';  // Hvis du har en egen CSS-fil for footer
+import { Link } from 'react-scroll';
+import './Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <p>&copy; 2025 Atika Gondal</p>
-        <a href="https://github.com/brukernavn" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={30} />
-        </a>
-      </div>
+      <p>&copy; 2025 Atika Gondal. All rights reserved.</p>
+      <Link to="top" smooth={true} duration={500}>
+        Back to top
+      </Link>
     </footer>
   );
 };

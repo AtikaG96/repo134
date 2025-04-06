@@ -87,7 +87,7 @@ const MyProjects = () => {
   });
 
   return (
-    <section className="projects-section">
+    <section className="projects-section"id="projects-section">
       <div className="projects-hero">
         <h1>Mine prosjekter</h1>
         <p>Utforsk mine arbeider innen teknologi, design og innovasjon.</p>

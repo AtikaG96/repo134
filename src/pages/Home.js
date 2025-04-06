@@ -4,7 +4,7 @@ import '../assets/components/home.css';
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div className="home-container"id="home-section">
       <nav className="navbar">
         <ul className="nav-list">
           <li><Link to="/">Hjem</Link></li>
