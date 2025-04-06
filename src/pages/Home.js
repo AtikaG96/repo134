@@ -1,22 +1,22 @@
+import '../assets/components/home.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/components/home.css';
 
 const Home = () => {
   return (
-    <div className="home-container"id="home-section">
+    <div className="home-container">
       <nav className="navbar">
         <ul className="nav-list">
-          <li><Link to="/">Hjem</Link></li>
-          <li><Link to="/about">Om meg</Link></li>
-          <li><Link to="/projects">Prosjekter</Link></li>
-          <li><Link to="/experience">Arbeidserfaring</Link></li>
-          <li><Link to="/certifications">Sertifiseringer</Link></li>
+          <li><Link to="/" className="nav-link">Hjem</Link></li>
+          <li><Link to="/about" className="nav-link">Om meg</Link></li>
+          <li><Link to="/projects" className="nav-link">Prosjekter</Link></li>
+          <li><Link to="/experience" className="nav-link">Arbeidserfaring</Link></li>
+          <li><Link to="/certifications" className="nav-link">Sertifiseringer</Link></li>
         </ul>
       </nav>
 
       <div className="main-content">
-        <div className="text-card">
+        <div className="blue-gradient-card">
           <h1 className="main-title">Velkommen til min portfolio</h1>
           <h2 className="subtitle">En dyktig og kreativ dataingeniør</h2>
           <div className="cta-container">

@@ -1,10 +1,13 @@
 .home-container {
   font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
   background-color: #333;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -12,14 +15,17 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
-  padding: 10px;
-  margin: 0 15px;
+  padding: 10px 15px;
   font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -27,18 +33,34 @@
 }
 
 .main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.blue-gradient-card {
+  background: linear-gradient(135deg, #172d4d, #0e8ba7);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 50px;
+  color: #C0C0C0;
 }
 
 .main-title {
-  font-size: 3rem;
-  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: silver;
 }
 
 .subtitle {
   font-size: 1.5rem;
-  color: #777;
+  margin-bottom: 30px;
+  color: rgba(246, 248, 249, 0.632);
 }
 
 .cta-container {
@@ -46,18 +68,53 @@
 }
 
 .cta-button {
+  display: inline-flex;
+  align-items: center;
   padding: 15px 30px;
-  background-color: #ff6347;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #ff4500;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .button-text {
   margin-right: 10px;
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .blue-gradient-card {
+    padding: 30px 20px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
 }
