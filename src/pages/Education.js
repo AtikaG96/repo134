@@ -1,5 +1,5 @@
 import React from 'react';
-import '../education.css';
+import '../workexperience.css';
 
 const Education = () => {
   const education = [
