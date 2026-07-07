@@ -9,6 +9,7 @@ const Home = () => {
         <ul className="nav-list">
           <li><Link to="/" className="nav-link">Hjem</Link></li>
           <li><Link to="/about" className="nav-link">Om meg</Link></li>
+          <li><Link to="/education" className="nav-link">Utdanning</Link></li>
           <li><Link to="/projects" className="nav-link">Prosjekter</Link></li>
           <li><Link to="/experience" className="nav-link">Arbeidserfaring</Link></li>
           <li><Link to="/certifications" className="nav-link">Sertifiseringer</Link></li>
