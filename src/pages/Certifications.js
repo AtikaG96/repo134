@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'src/Certifications.css'
+import "./Certifications.css";
 import { FaRegCalendarAlt, FaClock, FaTags, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Certifications = () => {
