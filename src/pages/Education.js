@@ -1,73 +1,77 @@
-const education = [
-  {
-    id: 1,
-    school: "OsloMet",
-    degree: "Master i medisinsk teknologi",
-    fieldOfStudy: "Anvendt datateknologi (ACIT) – Medisinsk teknologi",
-    startDate: "2026-08",
-    endDate: "",
-    currentlyStudying: true,
-    location: "Oslo, Norge",
-    description:
-      "Starter master i Anvendt datateknologi (ACIT) ved OsloMet med spesialisering innen medisinsk teknologi.",
-    skills: [],
-  },
-  {
-    id: 2,
-    school: "OsloMet",
-    degree: "Bachelor i Dataingeniør",
-    fieldOfStudy: "Dataingeniør",
-    startDate: "2016-08",
-    endDate: "2020-07",
-    currentlyStudying: false,
-    location: "Oslo, Norge",
-    description:
-      "Bachelorgrad i dataingeniørfag med fokus på systemutvikling, databaser, webutvikling, teknologiledelse, operativsystemer, Java, programutvikling, prototyping og matematikk (R1 og R2).",
-    skills: [
-      "Python",
-      "Spring Boot",
-      "Kotlin",
-      "HTML5",
-      "CSS3",
-      "Java",
-      "PostgreSQL",
-      "React.js",
-      "JavaScript",
-      "MySQL",
-    ],
-  },
-  {
-    id: 3,
-    school: "Heltberg Private Gymnas",
-    degree: "Studiespesialisering",
-    fieldOfStudy: "Realfag",
-    startDate: "2012-08",
-    endDate: "2016-07",
-    currentlyStudying: false,
-    location: "Oslo, Norge",
-    description:
-      "Videregående opplæring med studiespesialisering innen realfag.",
-    skills: [],
-  },
-];
+import React from 'react';
+import '../education.css';
 
+const Education = () => {
+  const education = [
+    {
+      title: "Master i medisinsk teknologi",
+      school: "OsloMet",
+      date: "08.2026 - Nå",
+      description:
+        "Starter master i Anvendt datateknologi (ACIT) ved OsloMet med spesialisering innen medisinsk teknologi.",
+      subjects: [],
+    },
+    {
+      title: "Bachelor i Dataingeniør",
+      school: "OsloMet",
+      date: "08.2016 - 07.2020",
+      description:
+        "Bachelorgrad i dataingeniørfag med fokus på systemutvikling, databaser, webutvikling, teknologiledelse, operativsystemer, Java, programutvikling, prototyping og matematikk (R1 og R2).",
+      subjects: [
+        "Python",
+        "Spring Boot",
+        "Kotlin",
+        "HTML5",
+        "CSS3",
+        "Java",
+        "PostgreSQL",
+        "React.js",
+        "JavaScript",
+        "MySQL",
+      ],
+    },
+    {
+      title: "Studiespesialisering - Realfag",
+      school: "Heltberg Private Gymnas",
+      date: "08.2012 - 07.2016",
+      description:
+        "Videregående opplæring med studiespesialisering innen realfag.",
+      subjects: [],
+    },
+  ];
 
-{education.map((edu) => (
-  <div key={edu.id}>
-    <h3>{edu.degree}</h3>
-    <h4>{edu.school}</h4>
-    <p>
-      {edu.startDate} -{" "}
-      {edu.currentlyStudying ? "Nåværende" : edu.endDate}
-    </p>
-    <p>{edu.description}</p>
+  return (
+    <section id="education" className="education-section">
+      <h1>Utdanning</h1>
 
-    {edu.skills.length > 0 && (
-      <ul>
-        {edu.skills.map((skill) => (
-          <li key={skill}>{skill}</li>
+      <div className="education-container">
+        {education.map((edu, i) => (
+          <div key={i} className="education-card">
+            <h2>{edu.title}</h2>
+            <h3>{edu.school}</h3>
+
+            <p className="date">{edu.date}</p>
+
+            <p className="description">
+              {edu.description}
+            </p>
+
+            {edu.subjects.length > 0 && (
+              <>
+                <h4>Teknologier og ferdigheter</h4>
+
+                <ul className="subjects">
+                  {edu.subjects.map((subject, j) => (
+                    <li key={j}>{subject}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
         ))}
-      </ul>
-    )}
-  </div>
-))}
+      </div>
+    </section>
+  );
+};
+
+export default Education;
