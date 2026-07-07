@@ -26,22 +26,48 @@ const Navbar = () => {
         <div className="mobile-menu-icon" onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
-        
+
         <ul className={`nav-list ${isMenuOpen ? 'active' : ''}`}>
           <li className={activeLink === 'home' ? 'active' : ''}>
-            <Link to="/" onClick={() => handleLinkClick('home')}>Hjem</Link>
+            <Link to="/" onClick={() => handleLinkClick('home')}>
+              Hjem
+            </Link>
           </li>
+
           <li className={activeLink === 'about' ? 'active' : ''}>
-            <Link to="/about" onClick={() => handleLinkClick('about')}>Om meg</Link>
+            <Link to="/about" onClick={() => handleLinkClick('about')}>
+              Om meg
+            </Link>
           </li>
+
+          <li className={activeLink === 'education' ? 'active' : ''}>
+            <Link to="/education" onClick={() => handleLinkClick('education')}>
+              Utdanning
+            </Link>
+          </li>
+
           <li className={activeLink === 'projects' ? 'active' : ''}>
-            <Link to="/myprojects" onClick={() => handleLinkClick('projects')}>Prosjekter</Link>
+            <Link to="/myprojects" onClick={() => handleLinkClick('projects')}>
+              Prosjekter
+            </Link>
           </li>
+
           <li className={activeLink === 'experience' ? 'active' : ''}>
-            <Link to="/experience" onClick={() => handleLinkClick('experience')}>Arbeidserfaring</Link>
+            <Link to="/experience" onClick={() => handleLinkClick('experience')}>
+              Arbeidserfaring
+            </Link>
           </li>
+
           <li className={activeLink === 'certifications' ? 'active' : ''}>
-            <Link to="/certifications" onClick={() => handleLinkClick('certifications')}>Sertifiseringer</Link>
+            <Link to="/certifications" onClick={() => handleLinkClick('certifications')}>
+              Sertifiseringer
+            </Link>
+          </li>
+
+          <li className={activeLink === 'contact' ? 'active' : ''}>
+            <Link to="/contact" onClick={() => handleLinkClick('contact')}>
+              Kontakt
+            </Link>
           </li>
         </ul>
       </div>
